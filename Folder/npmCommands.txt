@@ -1,0 +1,9 @@
+npm - global command, comes with node
+npm --version or --v
+
+local dependency - use it only in this particular project
+npm i <packagename> it will install a packagename
+
+global dependency - use it in any project
+npm install -g <packagename>
+sudo npm install -g <packagename> for (mac)
