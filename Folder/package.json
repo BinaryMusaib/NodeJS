@@ -4,6 +4,7 @@
   "description": "",
   "main": "Asyncfile.js",
   "scripts": {
+    
     "start": "nodemon lodashDependencies.js"
   },
   "keywords": [],
