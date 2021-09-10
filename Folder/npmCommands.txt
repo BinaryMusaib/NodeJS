@@ -7,3 +7,8 @@ npm i <packagename> it will install a packagename
 global dependency - use it in any project
 npm install -g <packagename>
 sudo npm install -g <packagename> for (mac)
+
+package.json - manifest file (stores important information about the project/package)
+manual approach ( create package.json in the root, create properties etc)
+npm init (step by step, press enter to skip)
+npm init -y (everything default)
