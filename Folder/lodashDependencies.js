@@ -5,4 +5,4 @@ const items = [1, [2, [3, [4]]]];
 //flattenDeep is a method of lodash
 const newItems = _.flattenDeep(items);
 console.log(newItems);
-console.log("Hello Qadri Samar and Musaib!");
+console.log("Hello world!");
