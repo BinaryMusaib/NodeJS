@@ -1,19 +1,22 @@
 const http = require('http');
 
-const server = http.createServer((req, res) => {
-    if (req.url === '/') { 
-        res.end('Home Page')
+const server = http.createServer(async (req, res) => {
+    if (req.url === '/') {
+        return res.end('Home Page')
     }
     if (req.url === '/about') {
         // Blocking Code
-        for (let i = 0; i < 10; i++) {
-            for (let j = 0; j < 10; j++) {
-                console.log(`${i} ${j}`);
+        await new Promise((resolve, reject) => {
+            for (let i = 0; i < 10; i++) {
+                for (let j = 0; j < 10; j++) {
+                    console.log(`${i} ${j}`);
+                }
             }
-        }
-        res.end('About Page');
+            resolve();
+        })
+        return res.end('About Page');
     }
-    res.end('Page Not Found');
+    return res.end('Page Not Found');
 });
 
 server.listen(5000, () => {
